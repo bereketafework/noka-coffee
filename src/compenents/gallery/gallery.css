@@ -1,0 +1,128 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: red;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        .icon-container {
+
+
+            img {
+                width: 70px;
+            }
+
+
+        }
+
+        h1 {
+            line-height: 1;
+            margin: 1rem 0 1rem 0;
+        }
+
+    }
+
+    .top::after {
+        content: '';
+        width: 40%;
+        height: 8px;
+        background: var(--color-green);
+        border-radius: 0 0 5px 5px;
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 5rem;
+        gap: 3rem;
+
+        .card {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: -2px 2px 2px var(--color-title);
+            transition: 1s ease;
+
+
+            .card-image,
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+            }
+
+            .card-body {
+                display: none;
+                position: absolute;
+                padding: 10px;
+                bottom: 0;
+                width: 300px;
+                height: 100px;
+                border-radius: 0 0 10px 10px;
+                background-color: var(--color-green);
+
+
+                h2 {
+                    color: var(--color-white);
+                }
+
+                p {
+                    color: var(--color-white-two);
+                    font-weight: var(--font-light);
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        .card:hover {
+            transition: 1s ease;
+
+            .card-body {
+                display: block;
+                transition: 1s ease;
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        margin: 0;
+        padding: 2rem;
+    }
+    .gallery {
+       margin: 0;
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+
+        .top::after {
+            width: 100%;
+            height: 5px;
+        }
+
+        .top h1 {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .top p {
+            color: var(--color-paragraph);
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+    }
+}

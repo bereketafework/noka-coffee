@@ -1,0 +1,42 @@
+footer {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    background-color: var(--color-green);
+    margin-top: 2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+
+    color: var(--color-white-two);
+
+    .box {
+        margin: 0 3rem 0 3rem;
+    }
+
+    img {
+        width: 100px;
+        mix-blend-mode: multiply;
+    }
+
+    .social-links ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .box {
+
+        i {
+            color: var(--color-white-two);
+            width: 90px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+}
