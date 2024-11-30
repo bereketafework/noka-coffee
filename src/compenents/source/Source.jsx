@@ -31,17 +31,9 @@ const Source = () => {
             </div>
             <div className="bottom">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Amet inventore vero natus asperiores veritatis dolorum
-                at consequatur. Omnis qui quaerat delectus deleniti provident
-                veniam tenetur ratione magnam voluptatum nisi, optio, dolore in laboriosam
-                sed doloribus. Cupiditate repudiandae ad eos distinctio delectus
-                exercitationem quos, laborum culpa dolore quae, tenetur saepe in eaque
-                reprehenderit assumenda dolores? Sed accusamus consequuntur blanditiis quo
-                rerum. Ratione cupiditate facere animi impedit dolorem optio aspernatur iure,
-                voluptas quibusdam rem dolores, dolore, dolor ullam eligendi aperiam sit distinctio
-                ad enim ducimus laudantium voluptates consequuntur! Officiis, modi nam, temporibus
-                aliquid. Delectus ipsam sit quo eligendi officia porro id eius.
+              Imagine a sip of pure, unadulterated coffee bliss. Grown at an astonishing 1716 meters above sea level in the heart of Ethiopia (5°35′N 38°15′E), this coffee is a testament to nature's artistry. The high altitude, rich volcanic soil, and ideal climate conspire to create beans that are nothing short of extraordinary.
+    <br/> <br/>
+With every cup, you'll embark on a sensory journey. Experience the vibrant acidity that dances on your palate, the floral and fruity notes that tantalize your senses, and the smooth, velvety finish that lingers long after the last drop. This is coffee that awakens your taste buds and elevates your morning ritual.
               </p>
             </div>
           </div>
