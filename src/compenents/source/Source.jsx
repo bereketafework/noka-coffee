@@ -51,7 +51,7 @@ With every cup, you'll embark on a sensory journey. Experience the vibrant acidi
               <div className="card-body">
                 <h3 className="card-title">Bardayee</h3>
                 <p>
-                  
+                  it is located at west guji zone around bule hora town
                 </p>
               </div>
 
