@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, Trophy, Users, Handshake } from 'lucide-react';
+import { Target, Eye, Trophy, Users, HeartHandshake as Handshake } from 'lucide-react';
 
 const About = () => {
   const values = [
