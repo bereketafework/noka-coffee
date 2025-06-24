@@ -15,18 +15,212 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-nokka-green hover:bg-nokka-brown text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-gradient-to-r from-nokka-green to-nokka-light-brown hover:from-nokka-light-brown hover:to-nokka-brown text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-nokka-green text-nokka-green hover:bg-nokka-green hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply bg-transparent border-2 border-nokka-green text-nokka-green hover:bg-nokka-green hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 relative overflow-hidden;
+  }
+  
+  .btn-secondary::before {
+    content: '';
+    @apply absolute inset-0 bg-nokka-green transform scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-left;
+  }
+  
+  .btn-secondary span {
+    @apply relative z-10;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl;
+    @apply transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:-translate-y-2;
   }
   
   .gradient-bg {
     @apply bg-gradient-to-br from-nokka-cream via-white to-nokka-cream/50;
+  }
+
+  .bg-300% {
+    background-size: 300% 300%;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a9543;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #734120;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: #4a9543;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #4a9543;
+  color: white;
+}
+
+/* Focus Styles */
+.focus-visible:focus {
+  outline: 2px solid #4a9543;
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%, 100% {
+    content: '...';
   }
 }
